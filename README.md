@@ -3,6 +3,7 @@
 
 This project provides a set of scripts to extract audio from video files and transcribe it into text using OpenAI's `whisper-base` model. The workflow is optimized for macOS and utilizes hardware acceleration (Apple GPU via MPS or Nvidia via CUDA), if available.
 
+PS: this project was created by using Gemini (2.5 Pro preview)
 ---
 
 ## Features
@@ -105,3 +106,12 @@ The core of the project. This Python script:
 -   Loads the `openai/whisper-base` model from Hugging Face.
 -   Transcribes the audio and saves the transcription to a formatted text file.
 -   Uses the secure `.safetensors` format by default.
+
+## 🛡️ Security and Privacy
+
+This project is designed to run entirely on your local machine.
+
+* **Local Execution**: All scripts, from audio extraction to transcription, run on your computer.
+* **Private Data**: Your audio files and the generated transcriptions are never sent to the cloud or external servers.
+* **No Retraining**: Your data is not used to retrain or improve the AI model. The script uses a local instance of the `openai/whisper-base` model to perform the transcription.
+* **Secure Format**: The transcription script prioritizes using the secure `.safetensors` format by default when loading the model.
